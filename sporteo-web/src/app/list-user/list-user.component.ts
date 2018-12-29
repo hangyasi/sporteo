@@ -15,13 +15,13 @@ export class ListUserComponent implements OnInit {
   constructor(private router: Router, private apiService: ApiService) { }
 
   ngOnInit() {
-    if(!window.localStorage.getItem('token')) {
+    /* if(!window.localStorage.getItem('token')) {
       this.router.navigate(['login']);
       return;
-    }
+    } */
     this.apiService.getUsers()
       .subscribe( data => {
-          this.users = data.result;
+          this.users = data;
       });
   }
 

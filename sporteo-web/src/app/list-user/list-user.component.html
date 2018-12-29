@@ -14,10 +14,10 @@
     </thead>
     <tbody>
     <tr *ngFor="let user of users">
-      <td class="hidden"></td>
+      <td>{{user.id}}</td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>{{user.name}}</td>
       <td></td>
       <td></td>
       <td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>

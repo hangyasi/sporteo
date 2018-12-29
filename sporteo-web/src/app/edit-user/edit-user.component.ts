@@ -33,7 +33,7 @@ export class EditUserComponent implements OnInit {
     });
     this.apiService.getUserById(+userId)
       .subscribe( data => {
-        this.editForm.setValue(data.result);
+        this.editForm.setValue(data);
       });
   }
 
